@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Heroes | Catálogo</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/catalog.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="logo" href="#inicio" aria-label="Marvel, inicio">MARVEL</a>
+            <nav aria-label="Navegación principal">
+                <a href="#inicio">Inicio</a>
+                <a href="#heroes">Héroes</a>
+                <a href="#villanos">Villanos</a>
+                <a href="#equipos">Equipos</a>
+                <a href="#acerca">Acerca de</a>
+            </nav>
+            <input id="search" type="search" aria-label="Buscar por nombre o identidad" placeholder="Buscar personajes…">
+        </div>
+    </header>
+
+    <main class="container" id="inicio">
+        <section class="featured" aria-labelledby="featured-title">
+            <div class="featured-content">
+                <p class="eyebrow">Héroe destacado</p>
+                <h1 id="featured-title">Iron Man</h1>
+                <p>Tony Stark pone su ingenio y su armadura al servicio de los Avengers.</p>
+                <a class="primary-button" href="#heroes">Explorar héroes</a>
+            </div>
+        </section>
+
+        <section class="statistics" aria-label="Estadísticas del catálogo">
+            <dl>
+                <div><dt>Héroes</dt><dd>12</dd></div>
+                <div><dt>Villanos</dt><dd>4</dd></div>
+                <div><dt>Equipos</dt><dd>3</dd></div>
+                <div><dt>Categorías</dt><dd>7</dd></div>
+            </dl>
+        </section>
+
+        <section class="catalog" id="heroes" aria-labelledby="heroes-title">
+            <div class="section-header">
+                <h2 id="heroes-title">Héroes</h2>
+                <div class="view-controls" role="group" aria-label="Vista de héroes">
+                    <button type="button" data-view="grid" aria-pressed="true" aria-controls="heroes-cards">Grid</button>
+                    <button type="button" data-view="rows" aria-pressed="false" aria-controls="heroes-cards">Rows</button>
+                </div>
+            </div>
+            <p class="result-status" role="status">12 personajes</p>
+            <div class="characters" id="heroes-cards">
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #9f2839" aria-hidden="true">IM</div>
+                    <div class="character-info">
+                        <h3>Iron Man</h3>
+                        <p class="real-name">Tony Stark</p>
+                        <p>Inventor que combate con una armadura de alta tecnología.</p>
+                        <div class="character-meta">
+                            <span class="tag">Tecnología</span>
+                            <span>Poder <strong>95/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Su armadura le permite volar, disparar rayos repulsores y resistir impactos. Es miembro de los Avengers.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #ab283b" aria-hidden="true">SM</div>
+                    <div class="character-info">
+                        <h3>Spider-Man</h3>
+                        <p class="real-name">Peter Parker</p>
+                        <p>Protector de Nueva York con habilidades arácnidas.</p>
+                        <div class="character-meta">
+                            <span class="tag">Sobrehumano</span>
+                            <span>Poder <strong>88/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Escala muros, utiliza lanzatelarañas y su sentido arácnido le avisa del peligro.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #4c5798" aria-hidden="true">TH</div>
+                    <div class="character-info">
+                        <h3>Thor</h3>
+                        <p class="real-name">Thor Odinson</p>
+                        <p>Dios asgardiano del trueno y miembro de los Avengers.</p>
+                        <div class="character-meta">
+                            <span class="tag">Cósmico</span>
+                            <span>Poder <strong>99/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Empuña el martillo Mjolnir y puede invocar rayos en combate.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #3e7549" aria-hidden="true">HK</div>
+                    <div class="character-info">
+                        <h3>Hulk</h3>
+                        <p class="real-name">Bruce Banner</p>
+                        <p>Científico que se transforma en un ser de fuerza extraordinaria.</p>
+                        <div class="character-meta">
+                            <span class="tag">Sobrehumano</span>
+                            <span>Poder <strong>98/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>La radiación gamma desencadenó su transformación. Como Hulk posee gran resistencia y fuerza física.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #763d60" aria-hidden="true">BW</div>
+                    <div class="character-info">
+                        <h3>Black Widow</h3>
+                        <p class="real-name">Natasha Romanoff</p>
+                        <p>Espía y especialista en combate cuerpo a cuerpo.</p>
+                        <div class="character-meta">
+                            <span class="tag">Combate</span>
+                            <span>Poder <strong>82/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Combina técnicas de infiltración, artes marciales y equipo táctico para ayudar a los Avengers.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #315883" aria-hidden="true">CA</div>
+                    <div class="character-info">
+                        <h3>Captain America</h3>
+                        <p class="real-name">Steve Rogers</p>
+                        <p>Supersoldado y líder de los Avengers.</p>
+                        <div class="character-meta">
+                            <span class="tag">Supersoldado</span>
+                            <span>Poder <strong>90/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Utiliza un escudo de vibranio y destaca por su liderazgo en el campo de batalla.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #813f8b" aria-hidden="true">DS</div>
+                    <div class="character-info">
+                        <h3>Doctor Strange</h3>
+                        <p class="real-name">Stephen Strange</p>
+                        <p>Maestro de las artes místicas y protector de la realidad.</p>
+                        <div class="character-meta">
+                            <span class="tag">Magia</span>
+                            <span>Poder <strong>97/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Utiliza hechizos, abre portales y combate amenazas de otras dimensiones.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #584276" aria-hidden="true">BP</div>
+                    <div class="character-info">
+                        <h3>Black Panther</h3>
+                        <p class="real-name">T’Challa</p>
+                        <p>Rey de Wakanda y guerrero de élite.</p>
+                        <div class="character-meta">
+                            <span class="tag">Tecnología</span>
+                            <span>Poder <strong>92/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Protege Wakanda con un traje de vibranio y las habilidades asociadas a la hierba en forma de corazón.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #41688f" aria-hidden="true">ST</div>
+                    <div class="character-info">
+                        <h3>Storm</h3>
+                        <p class="real-name">Ororo Munroe</p>
+                        <p>Integrante de los X-Men capaz de controlar el clima.</p>
+                        <div class="character-meta">
+                            <span class="tag">Mutante</span>
+                            <span>Poder <strong>96/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Puede convocar tormentas, dirigir rayos y volar aprovechando las corrientes de aire.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #86621e" aria-hidden="true">WV</div>
+                    <div class="character-info">
+                        <h3>Wolverine</h3>
+                        <p class="real-name">Logan (James Howlett)</p>
+                        <p>Mutante con garras retráctiles y regeneración acelerada.</p>
+                        <div class="character-meta">
+                            <span class="tag">Mutante</span>
+                            <span>Poder <strong>91/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Su esqueleto está recubierto de adamantium y su factor de curación le permite recuperarse de heridas graves.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #8d413e" aria-hidden="true">SL</div>
+                    <div class="character-info">
+                        <h3>Star-Lord</h3>
+                        <p class="real-name">Peter Quill</p>
+                        <p>Aventurero espacial y líder de los Guardians of the Galaxy.</p>
+                        <div class="character-meta">
+                            <span class="tag">Combate</span>
+                            <span>Poder <strong>84/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Utiliza propulsores, armas y experiencia como piloto para resolver conflictos en la galaxia.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #367762" aria-hidden="true">GM</div>
+                    <div class="character-info">
+                        <h3>Gamora</h3>
+                        <p class="real-name">Gamora</p>
+                        <p>Guerrera experta y miembro de los Guardians of the Galaxy.</p>
+                        <div class="character-meta">
+                            <span class="tag">Combate</span>
+                            <span>Poder <strong>90/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Su habilidad con la espada y su entrenamiento la convierten en una de las combatientes más capaces del equipo.</p>
+                        </details>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="catalog" id="villanos" aria-labelledby="villanos-title">
+            <div class="section-header">
+                <h2 id="villanos-title">Villanos</h2>
+                <div class="view-controls" role="group" aria-label="Vista de villanos">
+                    <button type="button" data-view="grid" aria-pressed="true" aria-controls="villanos-cards">Grid</button>
+                    <button type="button" data-view="rows" aria-pressed="false" aria-controls="villanos-cards">Rows</button>
+                </div>
+            </div>
+            <p class="result-status" role="status">4 personajes</p>
+            <div class="characters" id="villanos-cards">
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #665090" aria-hidden="true">TN</div>
+                    <div class="character-info">
+                        <h3>Thanos</h3>
+                        <p class="real-name">Thanos</p>
+                        <p>Titán que busca reunir las Gemas del Infinito.</p>
+                        <div class="character-meta">
+                            <span class="tag">Cósmico</span>
+                            <span>Poder <strong>99/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Con el Guantelete del Infinito puede combinar los poderes de las seis gemas.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #377259" aria-hidden="true">LK</div>
+                    <div class="character-info">
+                        <h3>Loki</h3>
+                        <p class="real-name">Loki Laufeyson</p>
+                        <p>Dios del engaño y rival de Thor en numerosas historias.</p>
+                        <div class="character-meta">
+                            <span class="tag">Magia</span>
+                            <span>Poder <strong>93/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Crea ilusiones, cambia de apariencia y usa el engaño para manipular a sus adversarios.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #626338" aria-hidden="true">GG</div>
+                    <div class="character-info">
+                        <h3>Green Goblin</h3>
+                        <p class="real-name">Norman Osborn</p>
+                        <p>Uno de los enemigos más conocidos de Spider-Man.</p>
+                        <div class="character-meta">
+                            <span class="tag">Tecnología</span>
+                            <span>Poder <strong>87/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Ataca desde su planeador y utiliza bombas con forma de calabaza.</p>
+                        </details>
+                    </div>
+                </article>
+                <article class="character-card">
+                    <div class="character-mark" style="--character-color: #863b62" aria-hidden="true">MG</div>
+                    <div class="character-info">
+                        <h3>Magneto</h3>
+                        <p class="real-name">Erik Lehnsherr (Max Eisenhardt)</p>
+                        <p>Mutante que manipula campos magnéticos y rival de los X-Men.</p>
+                        <div class="character-meta">
+                            <span class="tag">Mutante</span>
+                            <span>Poder <strong>98/100</strong></span>
+                        </div>
+                        <details>
+                            <summary>Ver detalles</summary>
+                            <p>Puede controlar metales y generar campos que le permiten defenderse o desplazarse.</p>
+                        </details>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="equipos" aria-labelledby="teams-title">
+            <div class="section-header"><h2 id="teams-title">Equipos</h2></div>
+            <div class="teams-grid">
+                <article class="team-card">
+                    <h3>Avengers</h3>
+                    <p>Defienden la Tierra frente a amenazas que superan a cualquier héroe por sí solo.</p>
+                    <p class="team-members">Iron Man · Thor · Hulk · Black Widow · Captain America</p>
+                </article>
+                <article class="team-card">
+                    <h3>Guardians of the Galaxy</h3>
+                    <p>Aventureros espaciales que protegen a los habitantes de la galaxia.</p>
+                    <p class="team-members">Star-Lord · Gamora</p>
+                </article>
+                <article class="team-card">
+                    <h3>X-Men</h3>
+                    <p>Mutantes que luchan por la convivencia entre humanos y mutantes.</p>
+                    <p class="team-members">Storm · Wolverine</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="acerca" aria-labelledby="about-title">
+            <div class="section-header"><h2 id="about-title">Acerca del catálogo</h2></div>
+            <p>Ejercicio de HTML, CSS y JavaScript. Las puntuaciones de poder son ilustrativas.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Marvel Heroes · Proyecto educativo. Los personajes pertenecen a sus respectivos titulares.</p>
+        </div>
+    </footer>
+</body>
+</html>
